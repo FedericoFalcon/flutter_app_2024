@@ -9,3 +9,6 @@ export 'flex_column_screen.dart';
 export 'container_page.dart';
 export 'alert_screen.dart';
 export 'slivers_page.dart';
+export 'pageview_screen.dart';
+export 'photo_screen.dart';
+export 'future_builder_page.dart';

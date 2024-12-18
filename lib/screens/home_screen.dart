@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/drawer_menu.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -6,27 +7,22 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'APPBAR',
-            style: TextStyle(
-                color: Color.fromARGB(255, 243, 244, 245),
-                fontWeight: FontWeight.bold),
-          ),
-          centerTitle: true,
-          backgroundColor: Color.fromARGB(255, 7, 66, 128),
+      appBar: AppBar(
+        title: const Text('Home'),
+        centerTitle: true,
+      ),
+      drawer: DrawerMenu(),
+      body: const Center(child: Text('Widget')),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print('hice click en el boton');
+        },
+        child: const Icon(
+          Icons.add,
+          size: 30,
         ),
-        body: Center(
-            child: Text(
-          'HomeScreen',
-          style: TextStyle(fontSize: 40),
-        )),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            print('hice click');
-          },
-          child: Icon(Icons.add_a_photo, size: 35),
-        ));
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+    );
   }
 }
